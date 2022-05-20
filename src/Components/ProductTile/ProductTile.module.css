@@ -1,9 +1,5 @@
-.card {
+div {
     text-align: center;
-    /* Style for "1" 
-    width: 271px;
-    height: 366px;
-    */
 }
 
 .cardTitle {
@@ -27,7 +23,7 @@
 
 .cardHover {
     opacity: 0;
-    transition: all 0.4s;
+    transition: all 0.2s;
     position: absolute;
     left: 0;
     right: 0;
@@ -56,3 +52,4 @@
 .cardHoverButtons button:nth-child(2) {
     margin-left: 7%;
 }
+

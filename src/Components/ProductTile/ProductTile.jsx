@@ -4,16 +4,22 @@ import { default as heart } from '../../icons/heart.svg';
 import { default as plus } from '../../icons/plus.svg';
 
 export default function ProductTile(props) {
+    function addtoCart () {
+        console.log("Added to the cart")
+    }
+    function addtoWishlist () {
+        console.log("Added to the Wishlist")
+    }
     return (
-        <div className={styles.card}>
-            <div className="card" style={{ width: "18rem"}}>
-                <img src={props.image} className="card-img-top" alt="Product Image" />
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-self-stretch">
+            <div class="card shadow-sm mb-3">
+                <img src={props.image} class="card-img-top" alt="Product Image" />
                 <div className={styles.cardHover}>
                     <div className={styles.cardHoverButtons}>
-                        <button type="button">
+                        <button type="button" onClick={addtoCart}>
                             <img src={plus} alt="Add to Cart" />
                         </button>
-                        <button type="button">
+                        <button type="button" onClick={addtoWishlist}>
                             <img src={heart} alt="Add to Wishlist" />
                         </button>
                     </div>
@@ -27,10 +33,7 @@ export default function ProductTile(props) {
                     </div>
                 </div>
             </div>
-            <br />
         </div>
+
     )
 }
-
-//Kristina Dam Oak Table With White Marble Top
-//$ 799.55
