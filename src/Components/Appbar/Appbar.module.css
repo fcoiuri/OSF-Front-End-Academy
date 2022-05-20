@@ -1,0 +1,148 @@
+.appbar {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    /*justify-content: space-between !important;*/
+    background-color: #ffffff;
+}
+
+.osf {
+    padding-left: 15%;
+    padding-top: 0;
+
+    color: #011847;
+    font-family: "Lato - Extra Bold";
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 6.33px;
+}
+
+.academy {
+    width: 74px;
+    height: 17px;
+    color: #84bc22;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 15%;
+    position: absolute;
+    text-align: left;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.textLogo {
+    margin-top: 0 !important;
+    padding-top: 20% !important;
+
+}
+
+.logo {
+    width: 63px;
+    height: 85px;
+    margin-left: 15%;
+    margin-right: 2%;
+}
+
+
+
+.grid {
+    padding-Left: 0;
+    padding-Right: 0;
+    padding-top: 0;
+}
+
+.row {
+    margin-Left: 0;
+    margin-Right: 0;
+}
+
+.column {
+    padding-Left: 0;
+    padding-Right: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.services:hover * {
+    background-color: #262a32;
+    color: #ffffff !important;
+    /*background-color: #84bc22;*/
+}
+
+
+.servicess {
+    width: 1853px;
+    height: 600px !important; 
+}
+
+.services:first-child:hover {
+    border-bottom: 3px solid #84bc22;
+
+
+}
+
+.services:focus * {
+    background-color: green !important;
+}
+
+.bag {
+    right: 30%;
+}
+
+.items {
+    padding-left: 10% !important;
+}
+
+.languages {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.search {
+    margin-left: 20% !important;
+}
+
+.bag {
+    padding-left: 20% !important;
+}
+
+
+
+.currencyLanguageNavbar {
+    padding-left: 3% !important;
+}
+
+.currencyLanguageNavbarItem {
+    padding-left: 12% !important;
+
+}
+
+.iconsNavbar {
+    padding-left: 5% !important;
+}
+
+.iconsNavbar * {
+    padding-left: 7% !important;
+}
+
+.navbarFooterMobile {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+}
+
+.navbarFooterMobileChilds {
+    padding-left: 7% !important;
+}
