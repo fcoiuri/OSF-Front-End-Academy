@@ -9,7 +9,7 @@ import { default as pinterest } from '../../icons/pinterest.svg';
 export default function Appbar() {
     /*min-vh-100*/
     return (   
-        <body className="d-flex flex-column">
+        <body className="d-flex flex-column min-vh-100">
             <footer className="page-footer font-small blue pt-4 mt-auto">
                 <div className="container-fluid text-md-left">
                     <div className="row">

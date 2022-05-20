@@ -1,0 +1,106 @@
+.showItems {
+    width: 100%;
+    height: 1061px;
+    background-color: #262a32;
+    justify-content: center;
+}
+
+.title {
+    padding-top: 6%;
+    padding-bottom: 3%;
+    color: #ffffff;
+    font-family: "Lato - Extra Bold";
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.title:before,
+.title:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 3px solid;
+    opacity: 0.1;
+    margin: auto;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.title:before {
+    margin-right: 3%;
+}
+
+.title:after {
+    margin-left: 3%;
+}
+
+/*
+
+.showItems {
+    width: 1283px;
+    height: 1061px;
+    background-color: #262a32;
+    justify-content: center;
+}
+
+.title {
+    padding-top: 6%;
+    padding-bottom: 3%;
+    color: #ffffff;
+    font-family: "Lato - Extra Bold";
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    
+    
+    overflow: hidden;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.title:before,
+.title:after {
+    background-color: #ffffff;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    opacity: 0.1;
+}
+
+.title:before {
+    right: 2em;
+    margin-left: -50%;
+}
+
+.title:after {
+    left: 2em;
+    margin-right: -50%;
+    
+}
+
+.borderTitle {
+    padding-top: 6%;
+    margin-left: 4%;
+
+    border-bottom: 3px solid #ffffff;
+    opacity: 0.1;
+    color: #ffffff;
+    font-family: "Lato - Extra Bold";
+    width: 35%;
+}
+*/

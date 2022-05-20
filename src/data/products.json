@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Kristina Dam Oak Table With White Marble Top",
+        "price": 799.55,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus consectetur interdum. Etiam ultricies mollis augue eget convallis. Fusce quis dictum nibh. Sed sodales faucibus metus vel pharetra. Sed fermentum ultrices tortor. Quisque vestibulum magna a ex bibendum eleifend. Etiam commodo mollis odio, placerat efficitur urna maximus sed. Ut luctus ipsum vel nunc fringilla, eget eleifend velit interdum. Nunc suscipit nunc ut blandit molestie. Sed eleifend, risus a venenatis lacinia, metus mauris placerat ex, id maximus urna felis sit amet sapien.",
+        "image": "./productsImages/WhiteTable.png",
+        "quantity": 15
+    },
+    {
+        "id": 2,
+        "title": "Hay - About a Lounge Chair AAL 93",
+        "price": 659.55,
+        "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur eleifend erat quam, nec scelerisque odio fermentum nec. Quisque fermentum nisi id ex ullamcorper semper. In euismod, neque id eleifend pretium, nibh ligula varius odio, a semper nisi libero in lacus. Nam consectetur tellus et ipsum lobortis, at semper dolor posuere. Sed vel nulla ligula. Etiam non ligula ut orci consectetur pretium sit amet hendrerit libero. Etiam sed ultrices diam, quis egestas est.",
+        "image": "../productsImages/Layer_152.png",
+        "quantity": 10
+    },
+    {
+        "id": 3,
+        "title": "Cocktail Table Walnut | Yes",
+        "price": 299.99,
+        "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur eleifend erat quam, nec scelerisque odio fermentum nec. Quisque fermentum nisi id ex ullamcorper semper. In euismod, neque id eleifend pretium, nibh ligula varius odio, a semper nisi libero in lacus. Nam consectetur tellus et ipsum lobortis, at semper dolor posuere. Sed vel nulla ligula. Etiam non ligula ut orci consectetur pretium sit amet hendrerit libero. Etiam sed ultrices diam, quis egestas est.",
+        "image": "../productsImages/Layer_153.svg",
+        "quantity": 456
+    },
+    {
+        "id": 4,
+        "title": "Cocktail Table Walnut | Yes",
+        "price": 299.99,
+        "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur eleifend erat quam, nec scelerisque odio fermentum nec. Quisque fermentum nisi id ex ullamcorper semper. In euismod, neque id eleifend pretium, nibh ligula varius odio, a semper nisi libero in lacus. Nam consectetur tellus et ipsum lobortis, at semper dolor posuere. Sed vel nulla ligula. Etiam non ligula ut orci consectetur pretium sit amet hendrerit libero. Etiam sed ultrices diam, quis egestas est.",
+        "image": "../productsImages/Layer_154.png",
+        "quantity": 456
+    },
+    {
+        "id": 5,
+        "title": "Hay - About A Lounge Chair AAL 93",
+        "price": 659.55,
+        "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur eleifend erat quam, nec scelerisque odio fermentum nec. Quisque fermentum nisi id ex ullamcorper semper. In euismod, neque id eleifend pretium, nibh ligula varius odio, a semper nisi libero in lacus. Nam consectetur tellus et ipsum lobortis, at semper dolor posuere. Sed vel nulla ligula. Etiam non ligula ut orci consectetur pretium sit amet hendrerit libero. Etiam sed ultrices diam, quis egestas est.",
+        "image": "../productsImages/Layer_155.png",
+        "quantity": 21
+    },
+    {
+        "id": 6,
+        "title": "TORY DESK CALENDAR",
+        "price": 410.99,
+        "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur eleifend erat quam, nec scelerisque odio fermentum nec. Quisque fermentum nisi id ex ullamcorper semper. In euismod, neque id eleifend pretium, nibh ligula varius odio, a semper nisi libero in lacus. Nam consectetur tellus et ipsum lobortis, at semper dolor posuere. Sed vel nulla ligula. Etiam non ligula ut orci consectetur pretium sit amet hendrerit libero. Etiam sed ultrices diam, quis egestas est.",
+        "image": "../productsImages/Layer_156.svg",
+        "quantity": 2
+    },
+    {
+        "id": 7,
+        "title": "CH445 Wing Chair on SUITE NY",
+        "price": 330.55,
+        "description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur eleifend erat quam, nec scelerisque odio fermentum nec. Quisque fermentum nisi id ex ullamcorper semper. In euismod, neque id eleifend pretium, nibh ligula varius odio, a semper nisi libero in lacus. Nam consectetur tellus et ipsum lobortis, at semper dolor posuere. Sed vel nulla ligula. Etiam non ligula ut orci consectetur pretium sit amet hendrerit libero. Etiam sed ultrices diam, quis egestas est.",
+        "image": "../productsImages/Layer_157.svg",
+        "quantity": 50
+    }
+]

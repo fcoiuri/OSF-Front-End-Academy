@@ -1,0 +1,58 @@
+.card {
+    text-align: center;
+    /* Style for "1" 
+    width: 271px;
+    height: 366px;
+    */
+}
+
+.cardTitle {
+    color: #45413e;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 18px;
+    text-align: center;
+}
+
+.cardSubtitle {
+    color: #011847;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cardHover {
+    opacity: 0;
+    transition: all 0.4s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.cardHover:hover {
+    background-color: #816fca;
+    background-image: linear-gradient(to top, #1cc167 0%, #2ed3a2 100%);
+    opacity: 0.9;
+}
+
+.cardHoverButtons button {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    padding: 8%;
+    margin-top: 50%;
+
+}
+
+.cardHoverButtons button:nth-child(2) {
+    margin-left: 7%;
+}
