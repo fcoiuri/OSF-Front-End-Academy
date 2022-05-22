@@ -1,0 +1,61 @@
+.carousel {
+    height: 490px;
+}
+
+.carousel .carouselIndicators button {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #FFF !important;
+    
+}
+
+.images {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.carouselImageText {
+    height: 500px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.textFirstSlider {
+    top: 5%;
+    text-align: left !important;
+    left: 5% !important;
+    
+}
+.textSecondSlider {
+    top: 5%;
+    left: 5% !important;
+}
+.textThirdSlider {
+    top: 5%;
+    text-align: right !important;
+    right: 5% !important;
+}
+
+.titleSlider {
+    color: #FFF;
+    font-size: 6ch;
+    justify-content: center;
+}
+
+.descriptionSlider {
+    margin-top: 5ch;
+    color: #FFF;
+}
+
+.loadMore {
+    margin-top: 1ch;
+    width: 20ch;
+    border: 0.3ch solid #ffffff;
+    opacity: 0.5019607843137255;
+    background-color:rgba(30, 29, 34, 0);
+    border-radius: 15px;
+    text-decoration: none;
+    color: #ffffff;
+}

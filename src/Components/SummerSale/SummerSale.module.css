@@ -1,0 +1,82 @@
+.summerSale {
+    background-color: #84bc22;
+    border-radius: 1rem;
+}
+
+.followFacebook {
+    margin-top: 5ch;
+    font-size: 2ch;
+    color: #45413E;
+    font-weight: 500;
+    font-family: Lato;
+}
+
+.descriptionFollowFacebook {
+    font-size: 1.5ch;
+    color: #45413E;
+    font-weight: 500;
+    font-family: Lato;
+}
+
+.buttonFacebook {
+    background-color: var(--custom-color);
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 5%;
+    width: 20ch;
+    border: 0.3ch solid #3A5B96;
+    background-color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.followButtonButton,
+.followButton:hover,
+.followButton:visited,
+.followButton:link,
+.followButton:active {
+    text-decoration: none;
+    color: #3A5B96;
+}
+
+.followButton img {
+    margin-left: -4ch;
+    margin-top: 0.6ch;
+    position: absolute;
+
+}
+
+.icoSummerSale {
+    margin-left: -7.7rem;
+    position: absolute;
+    margin-top: -10rem;
+    height: 10rem;
+}
+
+.summerSaleDiscount {
+    padding-top: 2rem;
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: "Lato - Extra Bold";
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+}
+
+.summerSaleDiscountText {
+    margin-top: 4ch;
+    padding-bottom: 4ch;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: normal;
+}

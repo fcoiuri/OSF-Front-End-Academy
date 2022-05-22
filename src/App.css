@@ -1,13 +1,30 @@
 .App {
   text-align: center;
+  
 }
 
-.appbar{
+.appbar {
   margin: 0;
+  margin-bottom: 2ch;
 }
-.footer{
+
+.footer {
   background-color: #ffffff;
 }
+
+.carousel {
+  height: 30% !important;
+  width: 80%;
+  margin-bottom: 2ch;
+  margin-left: 5ch;
+}
+
+.summerSale {
+  position: absolute;
+  margin-top: -40.8%;
+  margin-left: 75%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,7 +55,9 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
