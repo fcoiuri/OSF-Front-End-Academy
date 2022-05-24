@@ -1,26 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import Home from './Components/Home';
-import Login from './Components/Login';
-import Appbar from './Components/Appbar';
-
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import Home from "./Components/Home";
+import Login from "./Components/Login";
+import Appbar from "./Components/Appbar";
+import Footer from "./Components/Footer";
+import NotFound from "./Components/NotFound";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  Navigate,
 } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <Appbar/>
-
+      <Appbar />
       <Routes>
-          <Route exact path="/" element={<Home />}/>
-          <Route  exact path="/login" element={<Login />}/>
-        </Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

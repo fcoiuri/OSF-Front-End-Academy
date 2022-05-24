@@ -71,8 +71,12 @@ export default function Appbar() {
                 <NavDropdown.Item href="#action/3.1">
                   Acessories
                 </NavDropdown.Item>
+                <Link to="/alcohol">
                 <NavDropdown.Item href="#action/3.2">Alcohol</NavDropdown.Item>
+                </Link>
+                <Link to="/art">
                 <NavDropdown.Item href="#action/3.3">Art</NavDropdown.Item>
+                </Link>
                 <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Drink</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">

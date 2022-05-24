@@ -60,6 +60,7 @@ export default function Login() {
               type="submit"
               style={{ width: "30%" }}
               className={styles.button}
+              onClick={_handleClose}
             >
               Login
             </Button>
