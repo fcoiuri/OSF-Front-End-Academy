@@ -2,3 +2,112 @@
   background-color: #f1edea;
   min-height: 100vh;
 }
+.title {
+  padding-top: 2%;
+  color: #000;
+  font-family: "Lato - Extra Bold";
+  font-size: 3rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.title:before,
+.title:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 3px solid;
+  opacity: 0.1;
+  margin: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.title:before {
+  margin-right: 3%;
+}
+
+.title:after {
+  margin-left: 3%;
+}
+
+.container{
+  background-color: #ffffff;
+  /* width: 100%; */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+.ops{
+  color: #84bc22;
+  font-weight: 700;
+  font-size: 5rem;
+}
+.notFound{
+  justify-content: left !important;
+  margin-top: 2% !important;
+  
+}
+.titleNotFound{
+  font-weight: bold;
+  text-align: left;
+}
+
+.descriptionNotFound{
+  padding-top: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  padding-right: 9rem;
+}
+
+.homepage {
+  color: #84bc22;
+  padding-top: 1rem;
+  font-family: Lato;
+  /* font-size: 0.8rem; */
+  /* padding-top: 1rem; */
+  /* padding-bottom: 2rem; */
+  /* font-weight: 400; */
+  font-style: normal;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 0.04rem;
+  text-align: left;
+  
+   
+}
+
+.homepage,
+.homepage:hover,
+.homepage:visited,
+.homepage:link,
+.homepage:active
+{
+    text-decoration: none;
+    color: #84bc22;
+}
+
+.search{
+  padding-top: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.2rem;
+}
+.searchInput{
+  text-align: left !important;
+  margin-top: 0.8rem;
+  border: 0.15rem solid #d7d7d7 !important;
+  border-radius: 1.2rem !important;
+  margin-bottom: 3rem;
+}
+
+.borderTest{
+  border: 0.15rem solid #d7d7d7 !important;
+  border-radius: 1.2rem !important;
+}

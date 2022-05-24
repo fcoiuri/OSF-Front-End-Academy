@@ -27,7 +27,7 @@ export default function Appbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
 
-  const _handleLogin = () => setShowLogin(!showLogin)
+  const _handleLogin = () => setShowLogin(!showLogin);
 
   const _handleResize = () => {
     if (window.innerWidth < 992) {
@@ -46,14 +46,18 @@ export default function Appbar() {
       <Navbar expand="lg">
         <Container>
           {isMobile && (
-            <Navbar.Brand href="/" className="m-auto">
-              <img alt="Logo" src={onlyLogo} />
-            </Navbar.Brand>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Navbar.Brand href="#" className="m-auto">
+                <img alt="Logo" src={onlyLogo} />
+              </Navbar.Brand>
+            </Link>
           )}
           {!isMobile && (
-            <Navbar.Brand href="/">
-              <img alt="Logo" src={logoWithName} />
-            </Navbar.Brand>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Navbar.Brand href="#">
+                <img alt="Logo" src={onlyLogo} />
+              </Navbar.Brand>
+            </Link>
           )}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -67,34 +71,73 @@ export default function Appbar() {
                   PRODUCT CATEGORIES
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-
-                <NavDropdown.Item href="#action/3.1">
-                  Acessories
-                </NavDropdown.Item>
-                <Link to="/alcohol">
-                <NavDropdown.Item href="#action/3.2">Alcohol</NavDropdown.Item>
+                <Link to="/acessories" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Acessories
+                  </NavDropdown.Item>
                 </Link>
-                <Link to="/art">
-                <NavDropdown.Item href="#action/3.3">Art</NavDropdown.Item>
+                <Link to="/alcohol" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Alcohol
+                  </NavDropdown.Item>
                 </Link>
-                <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Drink</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Eletronics
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Gadgets</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Garden</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Grocery</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Home</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Jewelry</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Kids & Baby
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Men's Fashion
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Mobile</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Garden</NavDropdown.Item>
+                <Link to="/art" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">Art</NavDropdown.Item>
+                </Link>
+                <Link to="/books" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Books
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/drink" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Drink
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/eletronics" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="javascript:;">
+                    Eletronics
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/gadgets" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Gadgets
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/garden" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Garden
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/grocery" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Grocery
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/home" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">Home</NavDropdown.Item>
+                </Link>
+                <Link to="/jewelry" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Jewelry
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/kids-baby" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#javascript:;">
+                    Kids & Baby
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/mensfashion" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#action/3.3">
+                    Men's Fashion
+                  </NavDropdown.Item>
+                </Link>
+                <Link to="/mobile" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#action/3.3">Mobile</NavDropdown.Item>
+                </Link>
+                <Link to="/garden" style={{ textDecoration: "none" }}>
+                  <NavDropdown.Item href="#action/3.3">Garden</NavDropdown.Item>
+                </Link>
               </NavDropdown>
               <Nav.Link href="#home">COMPANY</Nav.Link>
               <Nav.Link href="#link">LIBRARY</Nav.Link>
@@ -114,9 +157,9 @@ export default function Appbar() {
               <Navbar.Brand href="#search">
                 <img alt="Search" src={search} />
               </Navbar.Brand>
-                <Navbar.Brand href="javascript:;">
-                  <img alt="Login" src={login} onClick={_handleLogin}/>
-                </Navbar.Brand>
+              <Navbar.Brand href="javascript:;">
+                <img alt="Login" src={login} onClick={_handleLogin} />
+              </Navbar.Brand>
               <Navbar.Brand href="#wishlist">
                 <img alt="Wishlist" src={wishlist} />
               </Navbar.Brand>
@@ -149,7 +192,7 @@ export default function Appbar() {
           </Nav>
         </Navbar>
       )}
-      {showLogin && ( <Login/>)}
+      {showLogin && <Login />}
     </React.Fragment>
   );
 }
