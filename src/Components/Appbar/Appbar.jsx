@@ -1,77 +1,94 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown, DropdownButton, Dropdown, Table } from 'react-bootstrap/'
-import { default as onlyLogo } from '../../icons/onlyLogo.svg';
-import styles from './Appbar.module.css'
-import { default as bag } from '../../icons/bag.svg';
-import { default as wishlist } from '../../icons/wishlist.svg';
-import { default as login } from '../../icons/login.svg';
-import { default as search } from '../../icons/search.svg';
-import { default as logoWithName } from '../../icons/logoWithName.svg';
-import { default as searchMobile } from '../../icons/searchMobile.svg';
-import { default as loginMobile } from '../../icons/loginMobile.svg';
-import { default as wishlistMobile } from '../../icons/wishlistMobile.svg';
-import { default as bagMobile } from '../../icons/bagMobile.svg';
+import {
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  DropdownButton,
+  Dropdown,
+  Table,
+} from "react-bootstrap/";
+import { default as onlyLogo } from "../../icons/onlyLogo.svg";
+import styles from "./Appbar.module.css";
+import { default as bag } from "../../icons/bag.svg";
+import { default as wishlist } from "../../icons/wishlist.svg";
+import { default as login } from "../../icons/login.svg";
+import { default as search } from "../../icons/search.svg";
+import { default as logoWithName } from "../../icons/logoWithName.svg";
+import { default as searchMobile } from "../../icons/searchMobile.svg";
+import { default as loginMobile } from "../../icons/loginMobile.svg";
+import { default as wishlistMobile } from "../../icons/wishlistMobile.svg";
+import { default as bagMobile } from "../../icons/bagMobile.svg";
 import { useState, useEffect } from "react";
-
-
+import { Link } from "react-router-dom";
+import Login from "../Login";
 
 export default function Appbar() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  const _handleLogin = () => setShowLogin(!showLogin)
+
   const _handleResize = () => {
     if (window.innerWidth < 992) {
-      setIsMobile(true)
+      setIsMobile(true);
     } else {
-      setIsMobile(false)
+      setIsMobile(false);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("resize", _handleResize)
-  })
+    window.addEventListener("resize", _handleResize);
+  });
 
   return (
     <React.Fragment>
-
-
-      <Navbar expand="lg" >
+      <Navbar expand="lg">
         <Container>
           {isMobile && (
-            <Navbar.Brand href="/" className='m-auto'>
-              <img
-                alt="Logo"
-                src={onlyLogo}
-              />
+            <Navbar.Brand href="/" className="m-auto">
+              <img alt="Logo" src={onlyLogo} />
             </Navbar.Brand>
           )}
           {!isMobile && (
             <Navbar.Brand href="/">
-               <img
-                alt="Logo"
-                src={logoWithName}
-              />
+              <img alt="Logo" src={logoWithName} />
             </Navbar.Brand>
           )}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              
-              <NavDropdown title="SERVICES"   id="basic-nav-dropdown" className={styles.services}>
-              <NavDropdown.Item href="#action/3.4">PRODUCT CATEGORIES</NavDropdown.Item>
+              <NavDropdown
+                title="SERVICES"
+                id="basic-nav-dropdown"
+                className={styles.services}
+              >
+                <NavDropdown.Item href="#action/3.4">
+                  PRODUCT CATEGORIES
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                
-                <NavDropdown.Item href="#action/3.1">Acessories</NavDropdown.Item>
+
+                <NavDropdown.Item href="#action/3.1">
+                  Acessories
+                </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Alcohol</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Art</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Drink</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Eletronics</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Eletronics
+                </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Gadgets</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Garden</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Grocery</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Home</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Jewelry</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Kids & Baby</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Men's Fashion</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Kids & Baby
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Men's Fashion
+                </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Mobile</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Garden</NavDropdown.Item>
               </NavDropdown>
@@ -84,35 +101,23 @@ export default function Appbar() {
                 <NavDropdown.Item href="#action/3.1">PT-BR</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">ES</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="$ US" id="basic-nav-dropdown" >
+              <NavDropdown title="$ US" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">€ Euro</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">R$ Real</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Nav className={styles.iconsNavbar}>
               <Navbar.Brand href="#search">
-                <img
-                  alt="Search"
-                  src={search}
-                />
+                <img alt="Search" src={search} />
               </Navbar.Brand>
-              <Navbar.Brand href="#login">
-                <img
-                  alt="Login"
-                  src={login}
-                />
-              </Navbar.Brand>
+                <Navbar.Brand href="javascript:;">
+                  <img alt="Login" src={login} onClick={_handleLogin}/>
+                </Navbar.Brand>
               <Navbar.Brand href="#wishlist">
-                <img
-                  alt="Wishlist"
-                  src={wishlist}
-                />
+                <img alt="Wishlist" src={wishlist} />
               </Navbar.Brand>
               <Navbar.Brand href="#cart">
-                <img
-                  alt="Cart"
-                  src={bag}
-                />
+                <img alt="Cart" src={bag} />
               </Navbar.Brand>
             </Nav>
           </Navbar.Collapse>
@@ -120,7 +125,7 @@ export default function Appbar() {
       </Navbar>
       {isMobile && (
         <Navbar bg="dark" className={styles.navbarFooterMobile}>
-          <Nav className='m-auto'>
+          <Nav className="m-auto">
             <Navbar.Brand href="#search">
               <img
                 alt="Search"
@@ -129,26 +134,18 @@ export default function Appbar() {
               />
             </Navbar.Brand>
             <Navbar.Brand href="#login">
-              <img
-                alt="Login"
-                src={loginMobile}
-              />
+              <img alt="Login" src={loginMobile} />
             </Navbar.Brand>
             <Navbar.Brand href="#wishlist">
-              <img
-                alt="Wishlist"
-                src={wishlistMobile}
-              />
+              <img alt="Wishlist" src={wishlistMobile} />
             </Navbar.Brand>
             <Navbar.Brand href="#cart">
-              <img
-                alt="Cart"
-                src={bagMobile}
-              />
+              <img alt="Cart" src={bagMobile} />
             </Navbar.Brand>
           </Nav>
         </Navbar>
       )}
+      {showLogin && ( <Login/>)}
     </React.Fragment>
-  )
+  );
 }

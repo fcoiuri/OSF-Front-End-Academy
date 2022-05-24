@@ -1,33 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import Home from './Components/Home';
+import Login from './Components/Login';
 import Appbar from './Components/Appbar';
-import Footer from './Components/Footer';
-import PopularItems from './Components/PopularItems';
-import CarouselBanner from './Components/CarouselBanner';
-import SummerSale from './Components/SummerSale';
-import Banner from './Components/Banner';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <React.Fragment>
-      <div className='appbar'>
+    <Router>
       <Appbar/>
-      </div>
-      <div className='carousel'>
-      <CarouselBanner/>
-      </div>
-      <div className='summerSale'>
-      <SummerSale/>
-      </div>
-      <PopularItems/>
-      <div>
-        <Banner/>
-      </div>
-      <div className='footer'>
-      <Footer/>
-      </div>
-    </React.Fragment>
+
+      <Routes>
+          <Route exact path="/" element={<Home />}/>
+          <Route  exact path="/login" element={<Login />}/>
+        </Routes>
+    </Router>
   );
 }
 

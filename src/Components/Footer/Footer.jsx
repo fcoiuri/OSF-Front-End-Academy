@@ -6,7 +6,7 @@ import { default as google } from '../../icons/google+.svg';
 import { default as twitter } from '../../icons/twitter.svg';
 import { default as pinterest } from '../../icons/pinterest.svg';
 
-export default function Appbar() {
+export default function Footer() {
     /*min-vh-100*/
     return (   
         <body className="d-flex flex-column min-vh-100">
