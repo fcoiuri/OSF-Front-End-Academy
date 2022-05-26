@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import styles from "./NotFound.module.css";
 import { Link } from "react-router-dom";
+import Navigation from "../Navigation/";
 
 export default function NotFound() {
   const [search, setSearch] = useState("");
 
   return (
     <div className={styles.bg}>
+      <div className={styles.navigation}>
+        <Navigation local={"404"} />
+      </div>
       <div className={styles.title}>404</div>
       <div className={styles.container}>
         <div className="row">
-          <div className={`col ${styles.ops}`}>Oops!</div>
+          <div
+            className={`col d-flex align-items-center justify-content-center ${styles.ops}`}
+          >
+            Oops!
+          </div>
           <div className={`col ${styles.notFound}`}>
             <div className={styles.titleNotFound}>
               Sorry, this page could not be found!

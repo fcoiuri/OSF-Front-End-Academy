@@ -30,3 +30,8 @@
     line-height: 31px;
 
 }
+
+.email{
+    text-decoration: none;
+    color: #000;
+}

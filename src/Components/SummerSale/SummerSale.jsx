@@ -20,7 +20,9 @@ export default function SummerSale() {
       </div>
       <button className={styles.buttonFacebook} type="button">
         <a
-          href="javascript:void(0);"
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.facebook.com"
           role="button"
           className={styles.followButton}
         >
