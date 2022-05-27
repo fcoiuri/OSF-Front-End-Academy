@@ -6,6 +6,7 @@ import Login from "./Components/Login";
 import Appbar from "./Components/Appbar";
 import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
+import { Product } from "./Components/Product";
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/products" element={<Product />} />
       </Routes>
       <Footer />
     </Router>

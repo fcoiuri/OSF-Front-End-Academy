@@ -5,6 +5,7 @@ import PopularItems from "../PopularItems";
 import CarouselBanner from "../CarouselBanner";
 import SummerSale from "../SummerSale";
 import Banner from "../Banner";
+import { Product } from "../Product";
 
 export default function Home() {
   return (
