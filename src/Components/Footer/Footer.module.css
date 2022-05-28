@@ -31,7 +31,16 @@
 
 }
 
-.email{
+.devices{
     text-decoration: none;
     color: #000;
+}
+
+.devices,
+.devices:hover,
+.devices:visited,
+.devices:link,
+.devices:active {
+   text-decoration: none;
+   color: #000;
 }

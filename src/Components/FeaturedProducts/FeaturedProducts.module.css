@@ -1,6 +1,6 @@
 .bg {
-    height: 63vh;
     background-color: #262a32;
+    
 }
 
 .title {
@@ -57,4 +57,9 @@
   
   .trace:after {
     margin-left: 1.5vw;
+  }
+
+  .products{
+    margin-top: 1rem;
+    padding-bottom: 2rem;
   }

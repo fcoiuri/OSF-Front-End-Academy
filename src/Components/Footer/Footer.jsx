@@ -27,13 +27,18 @@ export const Footer = () => {
                 <p>Québec, Québec G2K 2H6</p>
                 <p>
                   <a
-                    className={styles.email}
+                    className={styles.devices}
                     href="mailto:contact@osf-global.com"
                   >
                     contact@osf-global.com
                   </a>
                 </p>
-                <div>+1 (888) 548-4344</div>
+                <a
+                  className={styles.devices}
+                  href="tel:18885484344"
+                >
+                  <div>+1 (888) 548-4344</div>
+                </a>
               </div>
             </div>
             <div className="col-md-2 mt-md-0 mt-3">

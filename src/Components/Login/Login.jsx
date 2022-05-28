@@ -24,7 +24,7 @@ export const Login = () => {
               }}
               className="mb-4"
             >
-              <Form.Label>Email</Form.Label>
+              <Form.Label className={styles.emailField}>Email</Form.Label>
               <Form.Control type="email" autoFocus className={styles.inputs} />
             </Form.Group>
             <Form.Group

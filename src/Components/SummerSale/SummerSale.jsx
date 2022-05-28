@@ -12,7 +12,7 @@ export const SummerSale = () => {
           Summer
           <br /> Sales
         </div>
-        <img className={styles.icoSummerSale} src={summerSale} />
+        <img className={styles.icoSummerSale} src={summerSale} alt="Summer Sale"/>
       </div>
       <div className={styles.followFacebook}>Follow us on Facebook</div>
       <div className={styles.descriptionFollowFacebook}>

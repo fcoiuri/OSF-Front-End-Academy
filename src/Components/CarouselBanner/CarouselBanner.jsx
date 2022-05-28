@@ -4,6 +4,8 @@ import { default as image1 } from "./imgs/1.png";
 import { default as image2 } from "./imgs/2.png";
 import { default as image3 } from "./imgs/3.png";
 import { SummerSale } from "../SummerSale";
+import { Products } from "../Products";
+import { Link } from "react-router-dom";
 
 export const CarouselBanner = () => {
   return (
@@ -49,9 +51,11 @@ export const CarouselBanner = () => {
                 Improve business performance and the user experience with the
                 right mix of IoT technology and processes
               </p>
-              <button className={styles.viewmore} type="button">
-                VIEW MORE
-              </button>
+              <Link to="/products" style={{ textDecoration: "none" }}>
+                <button className={styles.viewmore} type="button">
+                  VIEW MORE
+                </button>
+              </Link>
             </div>
             <div className={styles.images}>
               <img src={image1} class="d-block" alt="..." />
@@ -68,9 +72,11 @@ export const CarouselBanner = () => {
                 Improve business performance and the user experience with the
                 right mix of IoT technology and processes
               </p>
-              <button className={styles.viewmore} type="button">
-                VIEW MORE
-              </button>
+              <Link to="/products" style={{ textDecoration: "none" }}>
+                <button className={styles.viewmore} type="button">
+                  VIEW MORE
+                </button>
+              </Link>
             </div>
             <div className={styles.images}>
               <img src={image2} class="d-block" alt="..." />
@@ -90,9 +96,11 @@ export const CarouselBanner = () => {
                 Improve business performance and the user experience with the
                 right mix of IoT technology and processes
               </p>
-              <button className={styles.viewmore} type="button">
-                VIEW MORE
-              </button>
+              <Link to="/products" style={{ textDecoration: "none" }}>
+                <button className={styles.viewmore} type="button">
+                  VIEW MORE
+                </button>
+              </Link>
             </div>
           </div>
         </div>

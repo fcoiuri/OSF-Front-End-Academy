@@ -6,7 +6,7 @@ export const Banner = () => {
   return (
     <React.Fragment>
       <img src={banner} alt="OSF Banner" className={styles.banner} />
-      <div className={styles.title}>Banner AAA Theme</div>
+      <div className={styles.title}>Banner OSF Theme</div>
       <div className={styles.description}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium

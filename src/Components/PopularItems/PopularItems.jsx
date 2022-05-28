@@ -14,17 +14,19 @@ export const PopularItems = () => {
         title={data.title}
         price={data.price}
         image={data.image}
+        product={data}
       />
     );
   });
 
-  const showMoreProducts = products.slice(8).map((data) => {
+  const showMoreProducts = products.slice(8,16).map((data) => {
     return (
       <ProductTile
         key={data.id}
         title={data.title}
         price={data.price}
         image={data.image}
+        product={data}
       />
     );
   });

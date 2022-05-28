@@ -1,10 +1,20 @@
 .bg {
-   background-color: #f1edea;
+   background-color: #f2edea;
    min-height: 100vh;
-   margin-left: 8vw;
-   margin-right: 3vw;
-   list-style-type: none;
 
+
+}
+
+.title {
+   color: #45413e;
+   font-family: "Lato - Extra Bold";
+   font-size: 3rem;
+   font-weight: 600;
+   font-style: normal;
+   letter-spacing: normal;
+   line-height: normal;
+   text-align: center;
+   margin-top: 1.5vh;
 }
 
 .container {
@@ -19,17 +29,6 @@
    padding-bottom: 3vh;
 }
 
-.title {
-   color: #45413e;
-   font-family: "Lato - Extra Bold";
-   font-size: 2rem;
-   font-weight: 500;
-   font-style: normal;
-   letter-spacing: normal;
-   line-height: normal;
-   text-align: center;
-   margin-top: 1.5vh;
-}
 
 .price {
    color: #45413e;
@@ -44,7 +43,23 @@
    padding-top: 1.2rem;
 }
 
-.addCart {
+.showProducts {
+   margin-top: 1rem;
+}
+
+.results {
+
+   color: #45413e;
+   font-family: Lato;
+   font-size: 1.1rem;
+   font-weight: 400;
+   font-style: normal;
+   letter-spacing: normal;
+   line-height: normal;
+   text-align: center;
+}
+
+.loadMore {
    border: 2px solid #d9d9d9;
    background-color: #84bc22;
    color: #ffffff;
@@ -55,20 +70,11 @@
 
 }
 
-.addCartButton,
-.addCartButton:hover,
-.addCartButton:visited,
-.addCartButton:link,
-.addCartButton:active {
+.loadMoreButton,
+.loadMoreButton:hover,
+.loadMoreButton:visited,
+.loadMoreButton:link,
+.loadMoreButton:active {
    text-decoration: none;
    color: #ffffff;
-   text-transform: uppercase;
-}
-
-.productDescription{
-   flex-direction: column;
-   position: absolute;
-   /* padding: 2vw; */
-   margin-left: 100%;
-   margin-top: -28rem;
 }
