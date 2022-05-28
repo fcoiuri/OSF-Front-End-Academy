@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import styles from "./NotFound.module.css";
 import { Link } from "react-router-dom";
-import Navigation from "../Navigation/";
+import { Navigation } from "../Navigation/";
+import { default as Search } from "../../icons/searchBlack.svg";
+import { default as Exclamation } from "../../icons/exclamation.svg";
 
-export default function NotFound() {
+export const NotFound = () => {
   const [search, setSearch] = useState("");
 
   return (
@@ -18,6 +20,11 @@ export default function NotFound() {
             className={`col d-flex align-items-center justify-content-center ${styles.ops}`}
           >
             Oops!
+            <div className={styles.exclamationOuter}>
+              <div className={styles.exclamation}>
+                <img src={Exclamation} alt="Exclamation" />
+              </div>
+            </div>
           </div>
           <div className={`col ${styles.notFound}`}>
             <div className={styles.titleNotFound}>
@@ -59,7 +66,7 @@ export default function NotFound() {
                       type="button"
                       style={{ border: 0 }}
                     >
-                      <i class="fa fa-search"></i>
+                      <img src={Search} alt="Search" />
                     </button>
                   </span>
                 </Link>
@@ -70,4 +77,4 @@ export default function NotFound() {
       </div>
     </div>
   );
-}
+};

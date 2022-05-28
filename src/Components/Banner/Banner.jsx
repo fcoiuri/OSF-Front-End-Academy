@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Banner.module.css";
 import { default as banner } from "../../imgs/banner.png";
 
-export default function Banner() {
+export const Banner = () => {
   return (
     <React.Fragment>
       <img src={banner} alt="OSF Banner" className={styles.banner} />

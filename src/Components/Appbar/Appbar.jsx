@@ -21,9 +21,9 @@ import { default as wishlistMobile } from "../../icons/wishlistMobile.svg";
 import { default as bagMobile } from "../../icons/bagMobile.svg";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Login from "../Login";
+import { Login } from "../Login";
 
-export default function Appbar() {
+export const Appbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
 
@@ -195,4 +195,4 @@ export default function Appbar() {
       {showLogin && <Login />}
     </React.Fragment>
   );
-}
+};

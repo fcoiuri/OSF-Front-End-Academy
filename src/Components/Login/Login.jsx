@@ -3,7 +3,7 @@ import styles from "./Login.module.css";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { default as eyeOpen } from "../../icons/eyeOpen.svg";
 
-export default function Login() {
+export const Login = () => {
   const [open, setOpen] = useState(true);
   const _handleClose = () => setOpen(false);
   const _handleShow = () => setOpen(true);

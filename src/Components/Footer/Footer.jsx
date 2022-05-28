@@ -7,7 +7,7 @@ import { default as twitter } from "../../icons/twitter.svg";
 import { default as pinterest } from "../../icons/pinterest.svg";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export const Footer = () => {
   /*min-vh-100*/
   return (
     <body className="d-flex flex-column">
@@ -185,22 +185,54 @@ export default function Footer() {
             <div className="col-md-2 mt-md-0 mt-3 row">
               <div className="col-md-3 mt-md-0 mt-3">
                 <h6>
-                  <img src={facebook} />
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.facebook.com"
+                    role="button"
+                    className={styles.followButton}
+                  >
+                    <img src={facebook} alt="Facebook logo" />
+                  </a>
                 </h6>
               </div>
               <div className="col-md-3 mt-md-0 mt-3">
                 <h6>
-                  <img src={google} />
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://killedbygoogle.com"
+                    role="button"
+                    className={styles.followButton}
+                  >
+                    <img src={google} alt="Google+" />
+                  </a>
                 </h6>
               </div>
               <div className="col-md-3 mt-md-0 mt-3">
                 <h6>
-                  <img src={twitter} />
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://twitter.com/"
+                    role="button"
+                    className={styles.followButton}
+                  >
+                    <img src={twitter} alt="Twitter logo" />
+                  </a>
                 </h6>
               </div>
               <div className="col-md-3 mt-md-0 mt-3">
                 <h6>
-                  <img src={pinterest} />
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://pinterest.com"
+                    role="button"
+                    className={styles.followButton}
+                  >
+                    <img src={pinterest} alt="Pinterest logo" />
+                  </a>
                 </h6>
               </div>
             </div>
@@ -209,4 +241,4 @@ export default function Footer() {
       </footer>
     </body>
   );
-}
+};

@@ -3,15 +3,14 @@ import styles from "./CarouselBanner.module.css";
 import { default as image1 } from "./imgs/1.png";
 import { default as image2 } from "./imgs/2.png";
 import { default as image3 } from "./imgs/3.png";
-import SummerSale from "../SummerSale";
+import { SummerSale } from "../SummerSale";
 
-export default function CarouselBanner() {
+export const CarouselBanner = () => {
   return (
     <div className="row" style={{ flexWrap: "nowrap" }}>
       <div
         id="carouselExampleDark"
         class={`carousel carousel-dark col-9 ${styles.carousel}`}
-        // style={{width:"100%", height: "50%"}}
         data-bs-ride="carousel"
       >
         <div className={`carousel-indicators ${styles.carouselIndicators}`}>
@@ -50,7 +49,7 @@ export default function CarouselBanner() {
                 Improve business performance and the user experience with the
                 right mix of IoT technology and processes
               </p>
-              <button className={styles.loadMore} type="button">
+              <button className={styles.viewmore} type="button">
                 VIEW MORE
               </button>
             </div>
@@ -69,7 +68,7 @@ export default function CarouselBanner() {
                 Improve business performance and the user experience with the
                 right mix of IoT technology and processes
               </p>
-              <button className={styles.loadMore} type="button">
+              <button className={styles.viewmore} type="button">
                 VIEW MORE
               </button>
             </div>
@@ -91,16 +90,16 @@ export default function CarouselBanner() {
                 Improve business performance and the user experience with the
                 right mix of IoT technology and processes
               </p>
-              <button className={styles.loadMore} type="button">
+              <button className={styles.viewmore} type="button">
                 VIEW MORE
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="col-3" style={{ marginLeft: "-20vh" }}>
+      <div className={`col-3 ${styles.summersale}`}>
         <SummerSale />
       </div>
     </div>
   );
-}
+};

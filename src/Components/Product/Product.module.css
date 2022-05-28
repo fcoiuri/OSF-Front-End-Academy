@@ -1,15 +1,41 @@
-.bg{
+.bg {
    background-color: #f1edea;
    min-height: 100vh;
-   margin-left: 15%;
-   margin-right: 15%;
-     
+   margin-left: 8vw;
+   margin-right: 8vw;
+   list-style-type: none;
+
 }
 
-.container{
-    background-color: #ffffff;
-    /* width: 100%; */
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2%;
-  }
+.container {
+   background-color: #ffffff;
+   /* width: 100%; */
+   margin-left: 4vw;
+   margin-right: 4vw;
+   margin-top: 2vw;
+   border-radius: 1%;
+   padding-top: 2vh;
+   padding-left: 2vw;
+   padding-bottom: 3vh;
+}
+
+.title {
+   color: #45413e;
+   font-family: "Lato - Extra Bold";
+   font-size: 2rem;
+   font-weight: 500;
+   font-style: normal;
+   letter-spacing: normal;
+   line-height: normal;
+   text-align: center;
+   margin-top: 1.5vh;
+}
+
+.price {
+   color: #45413e;
+   font-family: "Lato - Extra Bold";
+   font-size: 1.5rem;
+   font-weight: 400;
+   font-style: normal;
+
+}

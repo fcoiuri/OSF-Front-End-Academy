@@ -3,7 +3,7 @@ import styles from './ProductTile.module.css';
 import { default as heart } from '../../icons/heart.svg';
 import { default as plus } from '../../icons/plus.svg';
 
-export default function ProductTile(props) {
+export const ProductTile = (props) => {
     function addtoCart () {
         console.log("Added to the cart")
     }

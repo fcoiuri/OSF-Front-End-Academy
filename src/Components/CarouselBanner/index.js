@@ -1,2 +1,1 @@
-import CarouselBanner from "./CarouselBanner";
-export  default CarouselBanner;
+export { CarouselBanner } from "./CarouselBanner";

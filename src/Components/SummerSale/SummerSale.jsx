@@ -3,7 +3,7 @@ import styles from "./SummerSale.module.css";
 import { default as facebook } from "../../icons/facebookBlue.svg";
 import { default as summerSale } from "../../icons/summerSale.svg";
 
-export default function SummerSale() {
+export const SummerSale = () => {
   return (
     <React.Fragment>
       <div className={styles.summerSale}>

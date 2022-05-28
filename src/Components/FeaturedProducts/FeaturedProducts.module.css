@@ -1,0 +1,60 @@
+.bg {
+    height: 63vh;
+    background-color: #262a32;
+}
+
+.title {
+    color: #ffffff;
+    padding-top: 4vh;
+    text-align: center;
+    font-family: "Lato - Extra Bold";
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-family: "Lato - Regular";
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 3.5vw;
+}
+
+.trace {
+    padding-top: 2vh;
+    color: #ffffff;
+    font-family: "Lato - Extra Bold";
+    font-size: 6.5vh;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .trace:before,
+  .trace:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 3px solid;
+    opacity: 0.7;
+    margin: auto;
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+  
+  .trace:before {
+    margin-right: 1.5vw;
+  }
+  
+  .trace:after {
+    margin-left: 1.5vw;
+  }

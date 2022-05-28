@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ProductTile from "../ProductTile";
+import { ProductTile } from "../ProductTile";
 import styles from "./PopularItems.module.css";
 import products from "../../data/products.json";
 import { default as loadMore } from "../../icons/loadMore.svg";
 
-export default function PopularItems() {
+export const PopularItems = () => {
   const [showMore, setShowMore] = useState(false);
 
   const showProducts = products.slice(0, 8).map((data) => {
@@ -49,4 +49,4 @@ export default function PopularItems() {
       </button>
     </div>
   );
-}
+};

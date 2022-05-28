@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Navigation.module.css";
 import { Link } from "react-router-dom";
 
-export default function Navigation(props) {
+export const Navigation = (props) => {
   return (
     <div>
       <Link to="/" style={{ textDecoration: "none", color: "#84bc22" }}>

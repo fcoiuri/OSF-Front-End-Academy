@@ -1,2 +1,1 @@
-import SummerSale from "./SummerSale";
-export  default SummerSale;
+export { SummerSale } from "./SummerSale";
