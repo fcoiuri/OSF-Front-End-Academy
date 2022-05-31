@@ -4,6 +4,7 @@ import { Navigation } from "../Navigation";
 import { ProductTile } from "../ProductTile";
 import products from "../../data/products.json";
 
+
 export const Products = (props) => {
   const [showMore, setShowMore] = useState(false);
 
@@ -15,6 +16,7 @@ export const Products = (props) => {
         price={data.price}
         image={data.image}
         product={data}
+        id={data.id}
       />
     );
   });
@@ -27,6 +29,7 @@ export const Products = (props) => {
         price={data.price}
         image={data.image}
         product={data}
+        id={data.id}
       />
     );
   });

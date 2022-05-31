@@ -44,3 +44,11 @@
    text-decoration: none;
    color: #000;
 }
+
+.aboutMobile{
+    background-color: #ffffff !important;
+    text-transform: uppercase;
+    color: #000 !important;
+    margin-top: 1rem !important;
+    border: 0px solid #ffffff !important;
+}

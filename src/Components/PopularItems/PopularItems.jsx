@@ -15,6 +15,7 @@ export const PopularItems = () => {
         price={data.price}
         image={data.image}
         product={data}
+        id={data.id}
       />
     );
   });
@@ -27,6 +28,7 @@ export const PopularItems = () => {
         price={data.price}
         image={data.image}
         product={data}
+        id={data.id}
       />
     );
   });

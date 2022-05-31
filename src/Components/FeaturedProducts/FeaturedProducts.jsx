@@ -14,6 +14,7 @@ export const FeaturedProducts = () => {
         price={data.price}
         image={data.image}
         product={data}
+        id={data.id}
       />
     );
   });

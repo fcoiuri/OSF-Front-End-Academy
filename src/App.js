@@ -7,6 +7,7 @@ import { Footer } from "./Components/Footer";
 import { NotFound } from "./Components/NotFound";
 import { Product } from "./Components/Product";
 import { Products } from "./Components/Products";
+import { Cart } from "./Components/Cart/Cart";
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,8 +23,9 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/product" element={<Product />} />
         <Route exact path="/products" element={<Products />} />
+        <Route exact path="/products/:id" element={<Product />} />
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </Router>

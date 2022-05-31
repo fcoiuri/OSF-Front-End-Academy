@@ -78,7 +78,6 @@
 .services:hover * {
     background-color: #262a32;
     color: #ffffff !important;
-    /*background-color: #84bc22;*/
 }
 
 
@@ -145,4 +144,14 @@
 
 .navbarFooterMobileChilds {
     padding-left: 7% !important;
+}
+
+.cart{
+    color: #84bc22;
+    border: 2px solid #84bc22;
+    border-radius: 50%;
+    margin-top: -2rem !important;
+}
+.navbar{
+    background-color: #ffffff;
 }

@@ -53,3 +53,13 @@ div {
     margin-left: 7%;
 }
 
+.seeProduct{
+    background-color: #282D3C;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 9rem;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-top: 2rem;
+}

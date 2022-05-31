@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./CarouselBanner.module.css";
 import { default as image1 } from "./imgs/1.png";
 import { default as image2 } from "./imgs/2.png";
@@ -8,6 +8,20 @@ import { Products } from "../Products";
 import { Link } from "react-router-dom";
 
 export const CarouselBanner = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const _handleResize = () => {
+    if (window.innerWidth < 992) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", _handleResize);
+  });
+
   return (
     <div className="row" style={{ flexWrap: "nowrap" }}>
       <div
@@ -63,7 +77,7 @@ export const CarouselBanner = () => {
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <div
-              className={`carousel-caption d-none d-md-block ${styles.textSecondSlider}`}
+              className={`carousel-caption d-none d-md-block text-right ${styles.textSecondSlider}`}
             >
               <h1 className={` ${styles.titleSlider}`}>
                 Control and manage any device with cloud solutions
@@ -105,9 +119,11 @@ export const CarouselBanner = () => {
           </div>
         </div>
       </div>
-      <div className={`col-3 ${styles.summersale}`}>
-        <SummerSale />
-      </div>
+      {!isMobile && (
+        <div className={`col-3 ${styles.summersale}`}>
+          <SummerSale />
+        </div>
+      )}
     </div>
   );
 };
