@@ -38,7 +38,7 @@ export const Product = () => {
           <div className="carousel-inner mb-5">
             <div className="carousel-item active">
               <img
-                src={product.image}
+                src="../productsImages/NoImageFound.png"
                 className="d-block w-60"
                 alt="Product"
                 style={{ height: "50vh" }}
@@ -84,7 +84,7 @@ export const Product = () => {
                 <img
                   className="img-fluid d-block"
                   style={{ width: "4.5vw", height: "8vh" }}
-                  src={product.image}
+                  src="../productsImages/NoImageFound.png"
                   alt="Product"
                 />
               </button>
