@@ -6,20 +6,20 @@ export const Year = () => {
   return year;
 };
 
-export const useCountdown = (targetDate) => {
-  const countDownDate = new Date(targetDate).getTime();
+export const useCountdown = (date) => {
+  const countdownDate = new Date(date).getTime();
 
   const [countDown, setCountDown] = useState(
-    countDownDate - new Date().getTime()
+    countdownDate - new Date().getTime()
   );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountDown(countDownDate - new Date().getTime());
+      setCountDown(countdownDate - new Date().getTime());
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [countDownDate]);
+  }, [countdownDate]);
 
   return getReturnValues(countDown);
 };
