@@ -18,7 +18,7 @@ import {
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Appbar />
       <Routes>
         <Route path="*" element={<NotFound />} />
