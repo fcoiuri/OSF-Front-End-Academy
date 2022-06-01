@@ -2,7 +2,6 @@
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    /*justify-content: space-between !important;*/
     background-color: #ffffff;
 }
 
@@ -137,7 +136,6 @@
 }
 
 .navbarFooterMobile {
-    position: fixed !important;
     bottom: 0 !important;
     width: 100% !important;
 }

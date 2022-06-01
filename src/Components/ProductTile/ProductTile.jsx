@@ -25,9 +25,9 @@ export const ProductTile = (props) => {
     dispatch(addToWishlist(product));
   };
   return (
-    <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-self-stretch">
-      <div class="card shadow-sm mb-3">
-        <img src={props.image} class="card-img-top" alt="Product" />
+    <div className="col-sm-12 col-md-6 col-lg-3 d-flex align-self-stretch">
+      <div className="card shadow-sm mb-3">
+        <img src={props.image} className="card-img-top" alt="Product" />
         <div className={styles.cardHover}>
           <div className={styles.cardHoverButtons}>
             <button type="button" onClick={()=>addProductCart(product)}>

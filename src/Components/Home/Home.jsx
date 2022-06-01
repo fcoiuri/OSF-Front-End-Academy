@@ -5,29 +5,30 @@ import { CarouselBanner } from "../CarouselBanner";
 import { Banner } from "../Banner";
 import { FeaturedProducts } from "../FeaturedProducts";
 import { Purpose } from "../Purpose";
+import useWindowDimensions from "../../_utils/size";
+import { Release } from "../Release";
 
 export const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  const _handleResize = () => {
-    if (window.innerWidth < 992) {
+  const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    if (width < 992) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", _handleResize);
-  });
+  }, [width]);
 
   return (
     <React.Fragment>
       <CarouselBanner />
       <PopularItems />
       <Banner />
-      <FeaturedProducts />
+      {!isMobile && <FeaturedProducts />}
       <Purpose />
+      <Release />
     </React.Fragment>
   );
 };

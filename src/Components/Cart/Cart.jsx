@@ -8,7 +8,10 @@ import { deleteToCart } from "../../Redux/action";
 import { NavLink } from "react-router-dom";
 
 export const Cart = () => {
+  const [price, setPrice] = useState([]);
   const [totalPrice, setTotalPrice] = useState([]);
+  const [qty, setQty] = useState([]);
+
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
 
@@ -21,11 +24,21 @@ export const Cart = () => {
   };
 
   useEffect(() => {
-    const price = state.map((product)=>{return product.price})
-    setTotalPrice(price)
-  });
-  
-  
+    const quantity = state.map((product) => {
+      return product.qty;
+    });
+    const price = state.map((product) => {
+      return product.price;
+    });
+    const sum = quantity.map((num1, i) => {
+      return num1 * price[i];
+    });
+    const totalPrice = sum.reduce((x, a) => x + a, 0);
+
+    setTotalPrice(price);
+    setQty(quantity);
+    setTotalPrice(totalPrice);
+  }, [state]);
 
   const product = (product) => {
     return (
@@ -41,7 +54,7 @@ export const Cart = () => {
               />
             </div>
             <div className="col-md-6 pl-3" style={{ display: "flex" }}>
-              <h6 className="display-7 pl-3">{product.title}</h6>
+              <h6 className="display-7 pl-3">{product.title.substring(0,20)}</h6>
               <button
                 className="btn btn-outline-dark me-4 h-50 w-10 ml-3"
                 onClick={() => delProduct(product)}
@@ -55,7 +68,7 @@ export const Cart = () => {
                 <i className="fa fa-plus"></i>
               </button>
               <p className="lead font-weight-bold pl-3">
-                {(product.qty * product.price).toFixed(2)}
+                $ {(product.qty * product.price).toFixed(2)}
               </p>
               <p className={`ml-3 font-weight-bold ${styles.quantity}`}>
                 {product.qty}
@@ -84,11 +97,16 @@ export const Cart = () => {
     return (
       <div className="container">
         <div className="row">
+        </div>
           <NavLink to="/checkout" className={styles.checkout}>
             Proceed To Checkout
           </NavLink>
-          {totalPrice}
-        </div>
+          {totalPrice.length !== 0 && (
+            <React.Fragment>
+              <div className="lead font-weight-bold ">ORDER TOTAL:</div>
+              <span className="lead font-weight-bold pl-3">$ {totalPrice}</span>
+            </React.Fragment>
+          )}
       </div>
     );
   };

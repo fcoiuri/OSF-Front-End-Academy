@@ -7,21 +7,20 @@ import { default as twitter } from "../../icons/twitter.svg";
 import { default as pinterest } from "../../icons/pinterest.svg";
 import { Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
+import useWindowDimensions from "../../_utils/size";
 
 export const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  const _handleResize = () => {
-    if (window.innerWidth < 992) {
+  const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    if (width < 992) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", _handleResize);
-  });
+  }, [width]);
 
   return (
     <body className="d-flex flex-column">

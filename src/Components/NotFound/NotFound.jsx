@@ -49,7 +49,7 @@ export const NotFound = () => {
             <div className={styles.search}>Search our site</div>
 
             <div className={`col-md-9 ${styles.searchInput}`}>
-              <div class="input-group">
+              <div className="input-group">
                 <input
                   className="form-control border-end-0 "
                   style={{ border: 0 }}
@@ -60,9 +60,9 @@ export const NotFound = () => {
                   value={search}
                 />
                 <Link to={`/${search}`} style={{ textDecoration: "none" }}>
-                  <span class="input-group-append">
+                  <span className="input-group-append">
                     <button
-                      class="btn btn-outline-secondary bg-white ms-n5"
+                      className="btn btn-outline-secondary bg-white ms-n5"
                       type="button"
                       style={{ border: 0 }}
                     >

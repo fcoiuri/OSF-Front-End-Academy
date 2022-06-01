@@ -6,27 +6,26 @@ import { default as image3 } from "./imgs/3.png";
 import { SummerSale } from "../SummerSale";
 import { Products } from "../Products";
 import { Link } from "react-router-dom";
+import useWindowDimensions from "../../_utils/size";
 
 export const CarouselBanner = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  const _handleResize = () => {
-    if (window.innerWidth < 992) {
+  const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    if (width < 992) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", _handleResize);
-  });
+  }, [width]);
 
   return (
     <div className="row" style={{ flexWrap: "nowrap" }}>
       <div
         id="carouselExampleDark"
-        class={`carousel carousel-dark col-9 ${styles.carousel}`}
+        className={`carousel carousel-dark col-9 ${styles.carousel}`}
         data-bs-ride="carousel"
       >
         <div className={`carousel-indicators ${styles.carouselIndicators}`}>
@@ -34,7 +33,7 @@ export const CarouselBanner = () => {
             type="button"
             data-bs-target="#carouselExampleDark"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -52,11 +51,10 @@ export const CarouselBanner = () => {
           ></button>
         </div>
 
-        {/* <div className={`carousel-inner ${styles.carouselImageText}`}> */}
         <div className="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
+          <div className="carousel-item active" data-bs-interval="10000">
             <div
-              className={`carousel-caption d-none d-md-block ${styles.textFirstSlider}`}
+              className={`carousel-caption ${styles.textFirstSlider}`}
             >
               <h1 className={`col-9 ${styles.titleSlider}`}>
                 Control and manage any device with cloud solutions
@@ -71,13 +69,25 @@ export const CarouselBanner = () => {
                 </button>
               </Link>
             </div>
-            <div className={styles.images}>
-              <img src={image1} class="d-block" alt="..." />
-            </div>
+            {!isMobile && (
+              <div className={styles.images}>
+                <img src={image1} className="d-block img-fluid" alt="..." />
+              </div>
+            )}
+            {isMobile && (
+              <div className={` ${styles.images}`}>
+                <img
+                  src={image1}
+                  className="d-block img-fluid"
+                  style={{ height: "50vh", width: "60vw" }}
+                  alt="..."
+                />
+              </div>
+            )}
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
+          <div className="carousel-item" data-bs-interval="2000">
             <div
-              className={`carousel-caption d-none d-md-block text-right ${styles.textSecondSlider}`}
+              className={`carousel-caption text-right ${styles.textSecondSlider}`}
             >
               <h1 className={` ${styles.titleSlider}`}>
                 Control and manage any device with cloud solutions
@@ -92,18 +102,42 @@ export const CarouselBanner = () => {
                 </button>
               </Link>
             </div>
-            <div className={styles.images}>
-              <img src={image2} class="d-block" alt="..." />
-            </div>
+            {!isMobile && (
+              <div className={styles.images}>
+                <img src={image2} className="d-block img-fluid" alt="..." />
+              </div>
+            )}
+            {isMobile && (
+              <div className={` ${styles.images}`}>
+                <img
+                  src={image2}
+                  className="d-block img-fluid"
+                  style={{ height: "50vh", width: "60vw" }}
+                  alt="..."
+                />
+              </div>
+            )}
           </div>
-          <div class="carousel-item">
-            <div className={styles.images}>
-              <img src={image3} class="d-block" alt="..." />
-            </div>
+          <div className="carousel-item">
+            {!isMobile && (
+              <div className={styles.images}>
+                <img src={image3} className="d-block img-fluid" alt="..." />
+              </div>
+            )}
+            {isMobile && (
+              <div className={` ${styles.images}`}>
+                <img
+                  src={image3}
+                  className="d-block img-fluid"
+                  style={{ height: "50vh", width: "60vw" }}
+                  alt="..."
+                />
+              </div>
+            )}
             <div
-              className={`carousel-caption d-none d-md-block ${styles.textThirdSlider}`}
+              className={`carousel-caption text-right ${styles.textThirdSlider}`}
             >
-              <h1 className={`col-9 ${styles.titleSlider}`}>
+              <h1 className={`${styles.titleSlider}`}>
                 Control and manage any device with cloud solutions
               </h1>
               <p className={styles.descriptionSlider}>

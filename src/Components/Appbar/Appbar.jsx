@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Navbar,
   Container,
@@ -19,11 +19,11 @@ import { default as searchMobile } from "../../icons/searchMobile.svg";
 import { default as loginMobile } from "../../icons/loginMobile.svg";
 import { default as wishlistMobile } from "../../icons/wishlistMobile.svg";
 import { default as bagMobile } from "../../icons/bagMobile.svg";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Login } from "../Login";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import useWindowDimensions from "../../_utils/size";
 
 export const Appbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -35,14 +35,7 @@ export const Appbar = () => {
   const stateWishList = useSelector((state) => state.handleWishlist);
 
   const _handleLogin = () => setShowLogin(!showLogin);
-
-  const _handleResize = () => {
-    if (window.innerWidth < 992) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     setSizeCart(state.length);
@@ -50,8 +43,12 @@ export const Appbar = () => {
   });
 
   useEffect(() => {
-    window.addEventListener("resize", _handleResize);
-  });
+    if (width < 992) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [width]);
 
   return (
     <React.Fragment>
@@ -59,7 +56,11 @@ export const Appbar = () => {
         <Container>
           {isMobile && (
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Navbar.Brand href="#" className="m-auto">
+              <Navbar.Brand
+                href="#"
+                className="m-auto "
+                style={{ textAlign: "center" }}
+              >
                 <img alt="Logo" src={onlyLogo} />
               </Navbar.Brand>
             </Link>
@@ -152,13 +153,13 @@ export const Appbar = () => {
                 </Link>
               </NavDropdown>
               <NavLink to="company" style={{ textDecoration: "none" }}>
-              <Nav.Link href="#company">COMPANY</Nav.Link>
+                <Nav.Link href="#company">COMPANY</Nav.Link>
               </NavLink>
               <NavLink to="library" style={{ textDecoration: "none" }}>
-              <Nav.Link href="#library">LIBRARY</Nav.Link>
+                <Nav.Link href="#library">LIBRARY</Nav.Link>
               </NavLink>
               <NavLink to="contact_us" style={{ textDecoration: "none" }}>
-              <Nav.Link href="#contact_us">CONTACT US</Nav.Link>
+                <Nav.Link href="#contact_us">CONTACT US</Nav.Link>
               </NavLink>
             </Nav>
             <Nav className={styles.currencyLanguageNavbar}>
@@ -171,33 +172,39 @@ export const Appbar = () => {
                 <NavDropdown.Item href="#action/3.2">R$ Real</NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Nav className={styles.iconsNavbar}>
-            <NavLink to="search">
-              <Navbar.Brand href="#search">
-                <img alt="Search" src={search} />
-              </Navbar.Brand>
-            </NavLink>
-              <Navbar.Brand href="javascript:;">
-                <img alt="Login" src={login} onClick={_handleLogin} />
-              </Navbar.Brand>
-              <NavLink to="wishlist">
-                <Navbar.Brand>
-                  <img alt="Wishlist" src={wishlist} />
-                  <span className={styles.cart}>{sizeWishlist}</span>
+            {!isMobile && (
+              <Nav className={styles.iconsNavbar}>
+                <NavLink to="search">
+                  <Navbar.Brand href="#search">
+                    <img alt="Search" src={search} />
+                  </Navbar.Brand>
+                </NavLink>
+                <Navbar.Brand href="javascript:;">
+                  <img alt="Login" src={login} onClick={_handleLogin} />
                 </Navbar.Brand>
-              </NavLink>
-              <NavLink to="cart">
-                <Navbar.Brand>
-                  <img alt="Cart" src={bag} />
-                  <span className={styles.cart}>{sizeCart}</span>
-                </Navbar.Brand>
-              </NavLink>
-            </Nav>
+                <NavLink to="wishlist">
+                  <Navbar.Brand>
+                    <img alt="Wishlist" src={wishlist} />
+                    {sizeWishlist !== 0 && (
+                      <span className={styles.cart}>{sizeWishlist}</span>
+                    )}
+                  </Navbar.Brand>
+                </NavLink>
+                <NavLink to="cart">
+                  <Navbar.Brand>
+                    <img alt="Cart" src={bag} />
+                    {sizeCart !== 0 && (
+                      <span className={styles.cart}>{sizeCart}</span>
+                    )}
+                  </Navbar.Brand>
+                </NavLink>
+              </Nav>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
       {isMobile && (
-        <Navbar bg="dark" sticky="bottom" className={styles.navbarFooterMobile}>
+        <Navbar bg="dark" fixed="bottom" className={styles.navbarFooterMobile}>
           <Nav className="m-auto">
             <Navbar.Brand href="#search">
               <img
@@ -206,21 +213,24 @@ export const Appbar = () => {
                 className={styles.navbarFooterMobileChilds}
               />
             </Navbar.Brand>
-            <NavLink to="login">
-            <Navbar.Brand href="#login">
-              <img alt="Login" src={loginMobile} />
+            <Navbar.Brand href="javascript:;">
+              <img alt="Login" src={loginMobile} onClick={_handleLogin} />
             </Navbar.Brand>
-            </NavLink>
             <NavLink to="wishlist">
               <Navbar.Brand>
                 <img alt="Wishlist" src={wishlistMobile} />
-                <span className={styles.cart}>{sizeWishlist}</span>
+                {sizeWishlist !== 0 && (
+                  <span className={styles.cart}>{sizeWishlist}</span>
+                )}
               </Navbar.Brand>
             </NavLink>
             <NavLink to="cart">
               <Navbar.Brand>
                 <img alt="Cart" src={bagMobile} />
-                <span className={styles.cart}>{sizeCart}</span>
+
+                {sizeCart !== 0 && (
+                  <span className={styles.cart}>{sizeCart}</span>
+                )}
               </Navbar.Brand>
             </NavLink>
           </Nav>

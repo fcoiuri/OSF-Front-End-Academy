@@ -1,8 +1,6 @@
 .bg {
    background-color: #f2edea;
    min-height: 100vh;
-
-
 }
 
 .title {
@@ -19,7 +17,6 @@
 
 .container {
    background-color: #ffffff;
-   /* width: 100%; */
    margin-left: 4vw;
    margin-right: 4vw;
    margin-top: 2vw;
@@ -36,7 +33,6 @@
    font-size: 1.5rem;
    font-weight: 400;
    font-style: normal;
-
 }
 
 .navigation {

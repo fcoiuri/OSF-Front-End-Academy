@@ -33,18 +33,18 @@
 }
 .textThirdSlider {
     top: 5%;
-    text-align: right !important;
+    /* text-align: right !important; */
     right: 5% !important;
 }
 
 .titleSlider {
     color: #FFF;
-    font-size: 6ch;
+    font-size: 3.5vw;
     justify-content: center;
 }
 
 .descriptionSlider {
-    margin-top: 5ch;
+    /* margin-top: 5ch; */
     color: #FFF;
 }
 
