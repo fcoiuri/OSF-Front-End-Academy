@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OSF-Front-End-Academy/static/css/main.42929a7c.css",
-    "main.js": "/OSF-Front-End-Academy/static/js/main.96795c1a.js",
+    "main.js": "/OSF-Front-End-Academy/static/js/main.31ddf3e9.js",
     "static/media/banner.png": "/OSF-Front-End-Academy/static/media/banner.6bdaf0fa8af36e849c11.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/OSF-Front-End-Academy/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/3.png": "/OSF-Front-End-Academy/static/media/3.3a546d05649ff2f7e54e.png",
@@ -42,10 +42,10 @@
     "static/media/threeTraces.svg": "/OSF-Front-End-Academy/static/media/threeTraces.1ae8d563580b6bbefad2abb3d3f9a81a.svg",
     "static/media/facebook.svg": "/OSF-Front-End-Academy/static/media/facebook.48525764b282662f7ff809b28f825730.svg",
     "main.42929a7c.css.map": "/OSF-Front-End-Academy/static/css/main.42929a7c.css.map",
-    "main.96795c1a.js.map": "/OSF-Front-End-Academy/static/js/main.96795c1a.js.map"
+    "main.31ddf3e9.js.map": "/OSF-Front-End-Academy/static/js/main.31ddf3e9.js.map"
   },
   "entrypoints": [
     "static/css/main.42929a7c.css",
-    "static/js/main.96795c1a.js"
+    "static/js/main.31ddf3e9.js"
   ]
 }
